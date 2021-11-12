@@ -25,7 +25,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
           // Please change this to your repo.
-          editUrl: "https://github.com/SlavaOdinokov/my-docs",
+          editUrl: "https://github.com/SlavaOdinokov/my-docs/blob/main",
         },
         // blog: {
         //   showReadingTime: true,
