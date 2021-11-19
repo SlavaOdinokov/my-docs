@@ -11,5 +11,5 @@ sidebar_position: 2
 |    Field     |      Type       | isRequired |                Description                |
 | :----------: | :-------------: | :--------: | :---------------------------------------: |
 | isBackground |     Boolean     |   false    | если true делаем фон текущей группе полей |
-|     icon     |  UploadIconDto  |   false    |               объект иконки               |
+|     icon     |     String      |   false    |                url иконки                 |
 |    fields    | TemplateField[] |    true    |             поля внутри блока             |

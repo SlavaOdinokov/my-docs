@@ -95,13 +95,21 @@ sidebar_position: 5
 
 ### paragraph: TemplateParagraphSelect[]
 
-|    Field    |                        Type                         | isRequired |                          Description                          |
-| :---------: | :-------------------------------------------------: | :--------: | :-----------------------------------------------------------: |
-|    type     |                     ConfigEnum                      |    true    |                             type                              |
-|    value    | { text: string; value: string; type: ConfigEnum }[] |    true    |              варианты для селекта/мультиселекта               |
-|   markup    |                       String                        |    true    | вариант отображения селекта/мультиселекта (строка или список) |
-|    title    |                       String                        |   false    |                  нужен для инпутов, селектов                  |
-| description |                       String                        |   false    |                   описание для тултипа (?)                    |
+|    Field    |             Type              | isRequired |                          Description                          |
+| :---------: | :---------------------------: | :--------: | :-----------------------------------------------------------: |
+|    type     |          ConfigEnum           |    true    |                             type                              |
+|    value    | TemplateParagraphSelectItem[] |    true    |              варианты для селекта/мультиселекта               |
+|   markup    |            String             |    true    | вариант отображения селекта/мультиселекта (строка или список) |
+|    title    |            String             |   false    |                  нужен для инпутов, селектов                  |
+| description |            String             |   false    |                   описание для тултипа (?)                    |
+
+### value: TemplateParagraphSelectItem[]
+
+| Field |    Type    | isRequired |        Description        |
+| :---: | :--------: | :--------: | :-----------------------: |
+| text  |   String   |    true    |     описание варианта     |
+| value |   String   |    true    |     значение варианта     |
+| type  | ConfigEnum |    true    | тип варианта (text/input) |
 
 Пример абзаца с селектом:
 

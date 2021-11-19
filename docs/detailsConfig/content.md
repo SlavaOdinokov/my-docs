@@ -8,7 +8,8 @@ sidebar_position: 4
 
 ### content: TemplateContentItem[]
 
-|    Field     |                                  Type                                   | isRequired |               Description                |
-| :----------: | :---------------------------------------------------------------------: | :--------: | :--------------------------------------: |
-| isBackground |                                 Boolean                                 |   false    |   если true делаем фон текущему абзацу   |
-|  paragraph   | (TemplateParagraph \ TemplateParagraphList \ TemplateParagraphSelect)[] |    true    | один абзац состоящий из массива подстрок |
+|    Field     |                                  Type                                   | isRequired |                          Description                          |
+| :----------: | :---------------------------------------------------------------------: | :--------: | :-----------------------------------------------------------: |
+|  isDefault   |                                 Boolean                                 |   false    | определяет показывать ли абзац при первом рендеринге страницы |
+| isBackground |                                 Boolean                                 |   false    |             если true делаем фон текущему абзацу              |
+|  paragraph   | (TemplateParagraph \ TemplateParagraphList \ TemplateParagraphSelect)[] |    true    |           один абзац состоящий из массива подстрок            |

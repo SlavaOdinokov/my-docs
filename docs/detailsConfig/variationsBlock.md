@@ -12,6 +12,12 @@ sidebar_position: 6
 | :-----------: | :---------------------: | :--------: | :------------------------------------------------------------: |
 | [key: number] | TemplateVariationItem[] |    true    | номер варианта отображения контента внутри поля или всего поля |
 
+:::caution
+
+Тип TemplateVariation не пробрасывается в Swagger (соответственно TemplateVariationItem и TemplateVariationValue так же не пробрасываются), необходимо добавить эти типы вручную.
+
+:::
+
 ### :TemplateVariationItem
 
 |    Field    |           Type           | isRequired |         Description         |

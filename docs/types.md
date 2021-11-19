@@ -62,10 +62,17 @@ class TemplateVariation {
   [key: number]: TemplateVariationItem[]
 }
 
+class TemplateParagraphSelectItem {
+  text: string
+  value: string
+  type: string
+}
+
+
 class TemplateParagraphSelect {
   type: ConfigEnum
   markup: string
-  value: { text: string; value: string; type: ConfigEnum }[]
+  value: TemplateParagraphSelectItem[]
   title?: string
   description?: string
 }
@@ -83,13 +90,14 @@ class TemplateParagraphList {
 
 class TemplateContentItem {
   isBackground?: boolean
+  isDefault?: boolean
   paragraph: (TemplateParagraph | TemplateParagraphList | TemplateParagraphSelect)[]
 }
 
 class TemplateField {
   isBackground?: boolean
   title: string
-  icon?: UploadIconDto
+  icon?: string
   variationsField?: TemplateVariation
   content: TemplateContentItem[]
   description?: string
@@ -97,7 +105,7 @@ class TemplateField {
 
 class TemplateGroupItem {
   isBackground?: boolean
-  icon?: UploadIconDto
+  icon?: string
   fields: TemplateField[]
 }
 
@@ -105,7 +113,7 @@ class TemplateDetailsConfig {
   isBackground?: boolean
   title: string
   variationsBlock?: TemplateVariation
-  icon?: UploadIconDto
+  icon?: string
   groups: TemplateGroupItem[]
 }
 

@@ -15,7 +15,7 @@ sidebar_position: 3
 |      Field      |         Type          | isRequired |                                                                      Description                                                                       |
 | :-------------: | :-------------------: | :--------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
 |  isBackground   |        Boolean        |   false    |                                                           если true делаем фон текущему полю                                                           |
-|      icon       |     UploadIconDto     |   false    |                                                                     объект иконки                                                                      |
+|      icon       |        String         |   false    |                                                                       url иконки                                                                       |
 |      title      |        String         |    true    |                                                                         title                                                                          |
 | variationsField |   TemplateVariation   |   false    | описывает условия, если поле не обязательно, или какие-либо абзацы внутри поля не обязательны или вариативны (может содержать несколько таких условий) |
 |     content     | TemplateContentItem[] |    true    |                                                                      контент поля                                                                      |

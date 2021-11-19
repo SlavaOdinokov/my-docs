@@ -14,5 +14,5 @@ sidebar_position: 1
 |  isBackground   |       Boolean       |   false    |                                            если true делаем фон текущему блоку                                            |
 |      title      |       String        |    true    |                                                           title                                                           |
 | variationsBlock |  TemplateVariation  |   false    |                                       описывает условие, если блок не обязательный                                        |
-|      icon       |    UploadIconDto    |   false    |                                                       объект иконки                                                       |
+|      icon       |       String        |   false    |                                                        url иконки                                                         |
 |     groups      | TemplateGroupItem[] |    true    | объединяет поля блока в группы (нужно для создании иконки группе полей), если иконок нет, то в массиве всегда один объект |
