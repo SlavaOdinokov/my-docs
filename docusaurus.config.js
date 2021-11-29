@@ -58,6 +58,10 @@ const config = {
           // },
           // { to: "/blog", label: "Blog", position: "left" },
           {
+            type: "localeDropdown",
+            position: "right",
+          },
+          {
             href: "https://github.com/SlavaOdinokov/my-docs",
             label: "GitHub",
             position: "right",
@@ -114,6 +118,19 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "ru"],
+    localeConfigs: {
+      en: {
+        label: "English",
+      },
+      ru: {
+        label: "Russian",
+      },
+    },
+  },
 };
 
 module.exports = config;

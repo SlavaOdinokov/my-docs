@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-Config structure:
+Структура конфига:
 
 ```js
 class TemplateConfig {
