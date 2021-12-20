@@ -2,18 +2,21 @@
 sidebar_position: 5
 ---
 
-Представляет собой массив подстрок. Может быть стандартной строкой, списком или селектом/мультиселектом.
+It is an array of substrings. It can be a string, list or select / multi select field.
 
 ### paragraph: TemplateParagraph[]
 
-|    Field    |    Type    | isRequired |         Description         |
-| :---------: | :--------: | :--------: | :-------------------------: |
-|    type     | ConfigEnum |    true    |            type             |
-|    value    |   String   |    true    |            value            |
-|    title    |   String   |   false    | нужен для инпутов, селектов |
-| description |   String   |   false    |  описание для тултипа (?)   |
+|    Field    |    Type    | isRequired |                 Description                 |
+| :---------: | :--------: | :--------: | :-----------------------------------------: |
+|    type     | ConfigEnum |    true    |                    type                     |
+|    value    |   String   |    true    |                    value                    |
+|    title    |   String   |   false    | it is required for inputs and select fields |
+| description |   String   |   false    |       description for the tooltip (?)       |
+| placeholder |   String   |   false    |                 placeholder                 |
+|    name     |   String   |   false    |                 unique name                 |
+|     br      |  Boolean   |   false    |                 line break                  |
 
-Пример простой строки с инпутами:
+An example of the simple string with inputs:
 
 ```js
 {
@@ -38,14 +41,14 @@ sidebar_position: 5
 
 ### paragraph: TemplateParagraphList[]
 
-|    Field    |            Type             | isRequired |         Description         |
-| :---------: | :-------------------------: | :--------: | :-------------------------: |
-|    type     |         ConfigEnum          |    true    |            type             |
-|    value    | TemplateParagraphListItem[] |    true    |   массив элементов списка   |
-|    title    |           String            |   false    | нужен для инпутов, селектов |
-| description |           String            |   false    |  описание для тултипа (?)   |
+|    Field    |            Type             | isRequired |                 Description                 |
+| :---------: | :-------------------------: | :--------: | :-----------------------------------------: |
+|    type     |         ConfigEnum          |    true    |                    type                     |
+|    value    | TemplateParagraphListItem[] |    true    |           an array of items list            |
+|    title    |           String            |   false    | it is required for inputs and select fields |
+| description |           String            |   false    |       description for the tooltip (?)       |
 
-Пример абзаца со списком:
+An example of the paragraph with list:
 
 ```js
 {
@@ -89,29 +92,31 @@ sidebar_position: 5
 
 ### value: TemplateParagraphListItem
 
-|  Field   |                      Type                       | isRequired |          Description           |
-| :------: | :---------------------------------------------: | :--------: | :----------------------------: |
-| listItem | (TemplateParagraph / TemplateParagraphSelect)[] |    true    | элемент списка, аналог тега li |
+|  Field   |                      Type                       | isRequired |                  Description                   |
+| :------: | :---------------------------------------------: | :--------: | :--------------------------------------------: |
+| listItem | (TemplateParagraph / TemplateParagraphSelect)[] |    true    | list element, which is an analogue of "li" tag |
 
 ### paragraph: TemplateParagraphSelect[]
 
-|    Field    |             Type              | isRequired |                          Description                          |
-| :---------: | :---------------------------: | :--------: | :-----------------------------------------------------------: |
-|    type     |          ConfigEnum           |    true    |                             type                              |
-|    value    | TemplateParagraphSelectItem[] |    true    |              варианты для селекта/мультиселекта               |
-|   markup    |            String             |    true    | вариант отображения селекта/мультиселекта (строка или список) |
-|    title    |            String             |   false    |                  нужен для инпутов, селектов                  |
-| description |            String             |   false    |                   описание для тултипа (?)                    |
+|    Field    |             Type              | isRequired |                          Description                           |
+| :---------: | :---------------------------: | :--------: | :------------------------------------------------------------: |
+|    type     |          ConfigEnum           |    true    |                              type                              |
+|    value    | TemplateParagraphSelectItem[] |    true    |           options for select and multi select fields           |
+|   markup    |            String             |    true    | option for displaying select and multi select (string or list) |
+|    title    |            String             |   false    |          it is required for inputs and select fields           |
+| description |            String             |   false    |                description for the tooltip (?)                 |
 
 ### value: TemplateParagraphSelectItem[]
 
-| Field |    Type    | isRequired |        Description        |
-| :---: | :--------: | :--------: | :-----------------------: |
-| text  |   String   |    true    |     описание варианта     |
-| value |   String   |    true    |     значение варианта     |
-| type  | ConfigEnum |    true    | тип варианта (text/input) |
+|    Field    |    Type    | isRequired |        Description        |
+| :---------: | :--------: | :--------: | :-----------------------: |
+|    text     |   String   |    true    |    option description     |
+|    value    |   String   |    true    |       option value        |
+|    type     | ConfigEnum |    true    | variant type (text/input) |
+| placeholder |   String   |   false    |        placeholder        |
+|    name     |   String   |   false    |        unique name        |
 
-Пример абзаца с селектом:
+An example of the paragraph with select field:
 
 ```js
 {

@@ -14,9 +14,10 @@ sidebar_position: 3
 
 |      Field      |         Type          | isRequired |                                                                      Description                                                                       |
 | :-------------: | :-------------------: | :--------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
-|  isBackground   |        Boolean        |   false    |                                                           если true делаем фон текущему полю                                                           |
-|      icon       |        String         |   false    |                                                                       url иконки                                                                       |
-|      title      |        String         |    true    |                                                                         title                                                                          |
-| variationsField |   TemplateVariation   |   false    | описывает условия, если поле не обязательно, или какие-либо абзацы внутри поля не обязательны или вариативны (может содержать несколько таких условий) |
-|     content     | TemplateContentItem[] |    true    |                                                                      контент поля                                                                      |
-|   description   |        String         |   false    |                                                                описание для тултипа (?)                                                                |
+|  isBackground   |        Boolean        |   false    |                                                 if it is true, we implement background for this block                                                  |
+|      icon       |        String         |   false    |                                                                        icon url                                                                        |
+|      title      |        String         |   false    |                                                                         title                                                                          |
+| variationsField |   TemplateVariation   |   false    | describes a condition, if the field isn't mandatory or some paragraphs inside the field are not mandatory or variable (can contain several conditions) |
+|     content     | TemplateContentItem[] |    true    |                                                                    field's content                                                                     |
+|   description   |        String         |   false    |                                                            description for the tooltip (?)                                                             |
+|      show       |        Boolean        |   false    |                                 it defines whether we should show the element when we render a page at the first time                                  |

@@ -43,9 +43,13 @@ class TemplateParagraph {
   value: string
   title?: string
   description?: string
+  placeholder?: string
+  name?: string
+  br?: boolean
 }
 
 class TemplateVariationValue {
+  isDefault?: boolean
   text: string
   value: TemplateParagraph
   next?: number
@@ -53,6 +57,8 @@ class TemplateVariationValue {
 
 class TemplateVariationItem {
   type: ConfigEnum
+  name?: string
+  show?: boolean
   title: string
   value: TemplateVariationValue[]
   description?: string
@@ -66,6 +72,8 @@ class TemplateParagraphSelectItem {
   text: string
   value: string
   type: string
+  placeholder?: string
+  name?: string
 }
 
 
@@ -96,11 +104,12 @@ class TemplateContentItem {
 
 class TemplateField {
   isBackground?: boolean
-  title: string
+  title?: string
   icon?: string
   variationsField?: TemplateVariation
   content: TemplateContentItem[]
   description?: string
+  show?: boolean
 }
 
 class TemplateGroupItem {
@@ -111,10 +120,11 @@ class TemplateGroupItem {
 
 class TemplateDetailsConfig {
   isBackground?: boolean
-  title: string
+  title?: string
   variationsBlock?: TemplateVariation
   icon?: string
   groups: TemplateGroupItem[]
+  show?: boolean
 }
 
 class TemplateRequisitesColumn {
@@ -128,6 +138,7 @@ class TemplateRequisitesFooter {
 }
 
 class TemplateRequisites {
+  title?: string
   header: TemplateParagraph[]
   footer: TemplateRequisitesFooter
 }

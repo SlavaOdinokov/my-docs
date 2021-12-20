@@ -2,13 +2,13 @@
 sidebar_position: 2
 ---
 
-Описывает первый шаг в конструкторе:
+Describes the first step of the Contract Builder:
 
 ### coreConfig: TemplateCoreConfig
 
-|    Field     |      Type      | isRequired |           Description            |
-| :----------: | :------------: | :--------: | :------------------------------: |
-| isBackground |    Boolean     |   false    | если true делаем фон всем блокам |
-|    colors    | TemplateColors |    true    |                                  |
-|   headings   | TemplateStyle  |    true    |                                  |
-|   bodyText   | TemplateStyle  |    true    |                                  |
+|    Field     |      Type      | isRequired |                      Description                      |
+| :----------: | :------------: | :--------: | :---------------------------------------------------: |
+| isBackground |    Boolean     |   false    | if it is true, we implement background for all blocks |
+|    colors    | TemplateColors |    true    |                                                       |
+|   headings   | TemplateStyle  |    true    |                                                       |
+|   bodyText   | TemplateStyle  |    true    |                                                       |

@@ -12,6 +12,9 @@ sidebar_position: 5
 |    value    |   String   |    true    |            value            |
 |    title    |   String   |   false    | нужен для инпутов, селектов |
 | description |   String   |   false    |  описание для тултипа (?)   |
+| placeholder |   String   |   false    |         placeholder         |
+|    name     |   String   |   false    |       уникальное имя        |
+|     br      |  Boolean   |   false    |       перенос строки        |
 
 Пример простой строки с инпутами:
 
@@ -105,11 +108,13 @@ sidebar_position: 5
 
 ### value: TemplateParagraphSelectItem[]
 
-| Field |    Type    | isRequired |        Description        |
-| :---: | :--------: | :--------: | :-----------------------: |
-| text  |   String   |    true    |     описание варианта     |
-| value |   String   |    true    |     значение варианта     |
-| type  | ConfigEnum |    true    | тип варианта (text/input) |
+|    Field    |    Type    | isRequired |        Description        |
+| :---------: | :--------: | :--------: | :-----------------------: |
+|    text     |   String   |    true    |     описание варианта     |
+|    value    |   String   |    true    |     значение варианта     |
+|    type     | ConfigEnum |    true    | тип варианта (text/input) |
+| placeholder |   String   |   false    |        placeholder        |
+|    name     |   String   |   false    |      уникальное имя       |
 
 Пример абзаца с селектом:
 

@@ -4,40 +4,43 @@ sidebar_position: 6
 
 # variationsBlock/variationsField
 
-С помощью данного раздела осуществляется управление отображением блока/полей или контента внутри них.
+With this section you can manage displaying of blocks/fields or content inside them.
 
 ### variationsBlock/variationsField: TemplateVariation
 
-|     Field     |          Type           | isRequired |                          Description                           |
-| :-----------: | :---------------------: | :--------: | :------------------------------------------------------------: |
-| [key: number] | TemplateVariationItem[] |    true    | номер варианта отображения контента внутри поля или всего поля |
+|     Field     |          Type           | isRequired |  Description   |
+| :-----------: | :---------------------: | :--------: | :------------: |
+| [key: number] | TemplateVariationItem[] |    true    | variant number |
 
 :::caution
 
-Тип TemplateVariation не пробрасывается в Swagger (соответственно TemplateVariationItem и TemplateVariationValue так же не пробрасываются), необходимо добавить эти типы вручную.
+TemplateVariation type isn't send at Swagger (TemplateVariationItem and TemplateVariationValue as also), you should add them manually.
 
 :::
 
 ### :TemplateVariationItem
 
-|    Field    |           Type           | isRequired |         Description         |
-| :---------: | :----------------------: | :--------: | :-------------------------: |
-|    type     |        ConfigEnum        |    true    |            type             |
-|    value    | TemplateVariationValue[] |    true    | массив с вариантами ответов |
-|    title    |          String          |    true    |    вопрос или заголовок     |
-| description |          String          |   false    | какое-то описание варианта  |
+|    Field    |           Type           | isRequired |                                      Description                                      |
+| :---------: | :----------------------: | :--------: | :-----------------------------------------------------------------------------------: |
+|    type     |        ConfigEnum        |    true    |                                         type                                          |
+|    value    | TemplateVariationValue[] |    true    |                           an array with options of answers                            |
+|    title    |          String          |    true    |                                   question or title                                   |
+| description |          String          |   false    |                            some description for the option                            |
+|    name     |          String          |   false    |                                      unique name                                      |
+|    show     |         Boolean          |   false    | it defines whether we should show the element when we render a page at the first time |
 
 ### :TemplateVariationValue
 
-| Field |       Type        | isRequired |                                                                                                                                                               Description                                                                                                                                                                |
-| :---: | :---------------: | :--------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| text  |      String       |    true    |                                                                                                                                                      вариант ответа для отображения                                                                                                                                                      |
-| next  |      Number       |   false    |                                                                                                                                                   номер следующего вопроса, если есть                                                                                                                                                    |
-| value | TemplateParagraph |    true    | вариант ответа, где всегда type: ‘Text’, а value может принимать значения show/hide – в случаи если хотим либо показывать, либо не показывать все поле/блок целиком, либо индексы абзацев из массива content и значение show/hide (пример “0,1-show” или “2,3-hide”) если хотим показывать или скрывать конкретные абзацы внутри content |
+|   Field   |       Type        | isRequired |                                                                                                                                             Description                                                                                                                                              |
+| :-------: | :---------------: | :--------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|   text    |      String       |    true    |                                                                                                                                    possible answer for displaying                                                                                                                                    |
+|   next    |      Number       |   false    |                                                                                                                              number of the next question, if it exists                                                                                                                               |
+|   value   | TemplateParagraph |    true    | answer option, when the type is always 'Text' and the value can be: 1. show/hide - in cases, when we want to define do we show or hide the whole block/field. 2.“0,1-show”/“2,3-hide” where digits are paragraph indexes, which are used to define what paragraph we show inside the 'content' array |
+| isDefault |      Boolean      |   false    |                                                                                                        it defines whether we should show the element when we render a page at the first time                                                                                                         |
 
 ### Примеры
 
-Пример 1. Простая вариация, показывать блок или нет, осуществляется с помощью ключевых слов `show/hide`
+Example #1: Simple variability, whether we display or don't display, is carried out with the key words `show/hide`
 
 ```js
 variationsBlock: {
@@ -56,15 +59,15 @@ variationsBlock: {
 },
 ```
 
-В случаи сложной вариации управление контентом осуществляется по индексам массива content и ключевым словам `show/hide`, которые хранятся в value
+If it is a complex variability, you can manage content with an array index 'content' and key words `show/hide`, which are kept in 'value'
 
 ```js
 value: { type: 'text', value: '0,1-show' },
 ```
 
-Пример 2. Вариация контента внутри поля
+Example #2: Content variability inside the field
 
-Если пользователь на первый вопрос отвечает `Ja` – скрываем все поле Overwerk, если ответ `Nee` – показываем вопрос 2, если на второй вопрос ответ `Ja` - отображаем paragraph 1 и paragraph 2, если ответ `Nee` - paragraph 3.
+If a user answers `Ja` for the first question, then we hide Overwerk block. If he answers `Nee`, then we show the second question. If a user answers `Ja`, then we display paragraph 1 and paragraph 2. If he answers `Nee`, then we display paragraph 3
 
 ```js
 {

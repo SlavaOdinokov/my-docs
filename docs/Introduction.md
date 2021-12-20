@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-Config structure:
+Configuration structure:
 
 ```js
 class TemplateConfig {
@@ -15,8 +15,8 @@ class TemplateConfig {
 }
 ```
 
-|     Field     |          Type           | isRequired |                Description                 |
-| :-----------: | :---------------------: | :--------: | :----------------------------------------: |
-|  coreConfig   |   TemplateCoreConfig    |    true    |     описывает первый шаг конструктора      |
-|  requisites   |   TemplateRequisites    |    true    |         реквизиты сторон контракта         |
-| detailsConfig | TemplateDetailsConfig[] |    true    | каждый объект в массиве равен одному блоку |
+|     Field     |          Type           | isRequired |                   Description                    |
+| :-----------: | :---------------------: | :--------: | :----------------------------------------------: |
+|  coreConfig   |   TemplateCoreConfig    |    true    | describes the first step of the Contract Builder |
+|  requisites   |   TemplateRequisites    |    true    |   details of parties involved in the contract    |
+| detailsConfig | TemplateDetailsConfig[] |    true    |       every object in the array is a block       |
