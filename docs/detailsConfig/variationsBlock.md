@@ -31,15 +31,12 @@ TemplateVariation type isn't send at Swagger (TemplateVariationItem and Template
 
 ### :TemplateVariationValue
 
-| Field |       Type        | isRequired |                             Description                             |
-| :---: | :---------------: | :--------: | :-----------------------------------------------------------------: |
-| text  |      String       |    true    |                   possible answer for displaying                    |
-| next  |      Number       |   false    |              number of the next question, if it exists              |
-| value | TemplateParagraph |    true    | answer option, when the type is always 'Text' and the value can be: |
-
-1. show/hide - in cases, when we want to define do we show or hide the whole block/field.
-2. “0,1-show”/“2,3-hide” where digits are paragraph indexes, which are used to define what paragraph we show inside the 'content' array |
-   | isDefault | Boolean | false | it defines whether we should show the element when we render a page at the first time |
+|   Field   |       Type        | isRequired |                                                                                                                                              Description                                                                                                                                              |
+| :-------: | :---------------: | :--------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|   text    |      String       |    true    |                                                                                                                                    possible answer for displaying                                                                                                                                     |
+|   next    |      Number       |   false    |                                                                                                                               number of the next question, if it exists                                                                                                                               |
+|   value   | TemplateParagraph |    true    | answer option, when the type is always 'Text' and the value can be: 1. show/hide - in cases, when we want to define do we show or hide the whole block/field. 2. “0,1-show”/“2,3-hide” where digits are paragraph indexes, which are used to define what paragraph we show inside the 'content' array |
+| isDefault |      Boolean      |   false    |                                                                                                         it defines whether we should show the element when we render a page at the first time                                                                                                         |
 
 ### Примеры
 
