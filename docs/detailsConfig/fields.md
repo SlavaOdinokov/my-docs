@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-Примеры полей внутри блока:
+An example for fields inside the block:
 
 ![Field_1](/img/config/field_1.jpg)
 
-или
+or
 
 ![Field_2](/img/config/field_2.jpg)
 
